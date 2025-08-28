@@ -3,30 +3,28 @@ using UnityEngine;
 public class KeyboardController : MonoBehaviour
 {
     [Header("Motor References")]
-    public Motor1 motor1;
-    public Motor2 motor2;
+    public Motors motors;
     public float speed = 100f;
 
     void Start()
     {
         // Auto-find motors if not assigned
-        if (motor1 == null)
-            motor1 = GameObject.FindFirstObjectByType<Motor1>();
-        
-        if (motor2 == null)
-            motor2 = GameObject.FindFirstObjectByType<Motor2>();
+        if (motors == null)
+        {
+            motors = GameObject.FindFirstObjectByType<Motors>();
+        }
     }
-    
+
     void Update()
     {
         HandleInput();
     }
-    
+
     void HandleInput()
     {
         float motor1Speed = 0f;
         float motor2Speed = 0f;
-        
+
         // Arrow key controls
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -44,12 +42,12 @@ public class KeyboardController : MonoBehaviour
         {
             motor2Speed = -speed;
         }
-        
+
         // Apply speeds to motors
-        if (motor1 != null)
-            motor1.SetSpeed(motor1Speed);
-        
-        if (motor2 != null)
-            motor2.SetSpeed(motor2Speed);
+        if (motors != null)
+        {
+            motors.SetMotor1Speed(motor1Speed);
+            motors.SetMotor2Speed(motor2Speed);
+        }
     }
 }
