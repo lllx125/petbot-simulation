@@ -4,7 +4,8 @@ public class KeyboardController : MonoBehaviour
 {
     [Header("Motor References")]
     public Motors motors;
-    public float speed = 100f;
+    public float speed1 = 10f;
+    public float speed2 = 100f;
 
     void Start()
     {
@@ -28,19 +29,19 @@ public class KeyboardController : MonoBehaviour
         // WASD key controls
         if (Input.GetKey(KeyCode.W))
         {
-            motor1Speed = speed;
+            motor1Speed = speed1;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            motor1Speed = -speed;
+            motor1Speed = -speed1;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            motor2Speed = speed;
+            motor2Speed = -speed2;
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            motor2Speed = -speed;
+            motor2Speed = speed2;
         }
 
         // Apply speeds to motors
