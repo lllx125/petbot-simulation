@@ -25,20 +25,20 @@ public class KeyboardController : MonoBehaviour
         float motor1Speed = 0f;
         float motor2Speed = 0f;
 
-        // Arrow key controls
-        if (Input.GetKey(KeyCode.UpArrow))
+        // WASD key controls
+        if (Input.GetKey(KeyCode.W))
         {
             motor1Speed = speed;
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.S))
         {
             motor1Speed = -speed;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A))
         {
             motor2Speed = speed;
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D))
         {
             motor2Speed = -speed;
         }

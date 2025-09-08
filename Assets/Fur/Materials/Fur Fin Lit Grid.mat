@@ -41,13 +41,13 @@ Material:
     - _AlphaCutout: 0.172
     - _FurScale: 2
     - _Metallic: 0
-    - _NormalScale: 0.24
+    - _NormalScale: 0.2
     - _Occlusion: 0.426
     - _RimLightIntensity: 0.82
     - _RimLightPower: 6.4
     - _ShadowExtraBias: 0
     - _ShellAmount: 14
-    - _ShellStep: 0.004
+    - _ShellStep: 0.001
     - _Smoothness: 0.274
     m_Colors:
     - _AmbientColor: {r: 0.541732, g: 0.3378425, b: 0.91823894, a: 1}
