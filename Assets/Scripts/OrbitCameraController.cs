@@ -73,7 +73,7 @@ namespace UnityTemplateProjects
                 targetPosition = Vector3.zero;
             
             // Calculate initial angles from current camera position
-            Vector3 direction = (targetPosition-transform.position).normalized;
+            Vector3 direction = ( - targetPosition-transform.position).normalized;
             horizontalAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
             verticalAngle = Mathf.Asin(direction.y) * Mathf.Rad2Deg;
         }
